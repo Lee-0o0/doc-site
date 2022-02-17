@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>学习资源大合集</title>
@@ -8,16 +9,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="./vue.css">
   <link rel="stylesheet" href="./res/css/mycss.css">
-  <!-- mathjax 数学公式支持 -->
-  <script id="MathJax-script" async src="./res/js/mathjax/tex-chtml.js"></script>
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      }
-    };
-  </script>
+  <link rel="stylesheet" href="./res/css/katex.min.css"/>
 </head>
+
 <body>
   <div id="app" class="content">加载中...</div>
   <footer><span>CopyRight © 2022 By 水木子</span></footer>
@@ -30,10 +24,15 @@
       onlyCover: true,
     }
   </script>
-  <!-- Docsify v4 -->
-  <script src="./docsify-4.11.4.js"></script>
+  
   <!-- emoji表情支持 -->
   <script src="./res/js/emoji.min.js"></script>
+  <!-- 数学公式支持 -->
+  <script src="./res/js/docsify-katex.js"></script>
+  <!-- Docsify v4 -->
+  <script src="./docsify-4.11.4.js"></script>
   
+
 </body>
+
 </html>
