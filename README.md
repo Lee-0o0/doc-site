@@ -4,4 +4,4 @@
 
 
 
-[关于](./About.md)
+[关于](About.md)
