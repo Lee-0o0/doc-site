@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./vue.css">
   <link rel="stylesheet" href="./res/css/mycss.css">
   <link rel="stylesheet" href="./res/css/katex.min.css"/>
+  <link rel="stylesheet" href="./res/css/toc.css">
 </head>
 
 <body>
@@ -21,6 +22,20 @@
       repo: '',
       coverpage: true,
       onlyCover: true,
+
+      loadFooter: true,
+      
+      // 最后更新时间
+      timeUpdater: {
+        text: "> 最后更新时间: {docsify-updated}",
+        formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}",
+      },
+      // 自动生成右边目录
+      toc: {
+        scope: '.markdown-section',
+        headings: 'h1, h2, h3, h4',
+        title: '目录',
+      },
     }
   </script>
   
@@ -28,10 +43,17 @@
   <script src="./res/js/emoji.min.js"></script>
   <!-- 数学公式支持 -->
   <script src="./res/js/docsify-katex.js"></script>
+  <!-- 最后更新时间 -->
+  <script src="./res/js/time-updater.js"></script>
+  <!-- 自动生成目录 -->
+  <script src="./res/js/toc.js"></script>
   <!-- Docsify v4 -->
   <script src="./docsify-4.11.4.js"></script>
-  
+  <!-- 页脚信息 -->
+  <script src="./res/js/docsify-footer.min.js"></script>
 
+  <!-- 代码高亮 -->
+  <script src="./res/js/prism-java.js"></script>
 </body>
 
 </html>
