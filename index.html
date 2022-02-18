@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./res/css/mycss.css">
   <link rel="stylesheet" href="./res/css/katex.min.css"/>
   <link rel="stylesheet" href="./res/css/toc.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
 </head>
 
 <body>
@@ -20,14 +21,15 @@
     window.$docsify = {
       name: '',
       repo: '',
-      coverpage: true,
-      onlyCover: true,
 
+      repo: 'https://github.com/Lee-0o0/doc-site', // set the docsify show the corner
+
+      loadSidebar: true,
       loadFooter: true,
       
       // 最后更新时间
       timeUpdater: {
-        text: "> 最后更新时间: {docsify-updated}",
+        text: "<br><hr><br>\n> 最后更新时间: {docsify-updated}",
         formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}",
       },
       // 自动生成右边目录
@@ -54,6 +56,8 @@
 
   <!-- 代码高亮 -->
   <script src="./res/js/prism-java.js"></script>
+  <!-- 侧边栏 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 </body>
 
 </html>
