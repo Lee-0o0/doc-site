@@ -2,13 +2,10 @@
 
 > An awesome project.
 
-$a^2$
-
-$a^2 + b^2 = c^2$
 
 
-$$
-a^2 = c^2
-$$
+## C语言教程
+* [C语言— —编程语言与HelloWorld](docs/C/C语言-编程语言与HelloWorld.md)
+* 
 
-[关于](About.md)
+## Java教程
