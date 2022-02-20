@@ -90,17 +90,17 @@ $$
 
 现有一个n进制数$p_{x-1}...p_1p_0$，共有x位，则将其转换位十进制数的公式为：
 $$
-\begin{align}
+\begin{aligned}
 {p_{x-1}...p_1p_0}_{(n)} &= p_{x-1} \times n^{x-1} + ... + p_1\times n^1 + p_0\times n^0 \\ &= \sum_{k = 0}^{x-1}p_k\times n^k
-\end{align}
+\end{aligned}
 $$
 
 
 例如，现有二进制数$11101100_{(2)}$，转换为十进制数如下：
 $$
-\begin{align}
+\begin{aligned}
 11101100_{(2)} &= 1\times 2^7 + 1 \times 2^6 + 1 \times2^5 + 0\times2^4 + 1\times2^3 +1\times2^2 + 0\times2^1 + 0\times2^0 \\&= 128 + 64 + 32+0+8 + 4+0+0 \\ &=236
-\end{align}
+\end{aligned}
 $$
 
 
