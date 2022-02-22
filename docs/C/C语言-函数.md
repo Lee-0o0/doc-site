@@ -246,3 +246,81 @@ int factorial(int n){
 2. 大盘不能叠在小盘上面。
 
 输出N个圆盘的移动顺序。
+
+
+
+## 5. 函数指针与回调函数
+
+所谓函数指针，就是指向函数的指针。函数指针的声明语法如下：
+
+```c
+函数返回值类型 (* 函数指针名)(函数参数类型列表);
+```
+
+例如：
+
+```c
+void (*p)(int, int);
+```
+
+上述语句声明了一个名为`p`的函数指针，`p`指向返回类型为`void`，接收两个`int`型参数的函数。
+
+我们可以给`p`赋值，然后就可以通过函数指针`p`来调用函数了：
+
+```c
+# include <stdio.h>
+
+// 声明及定义函数
+void printTwoNumber(int a, int b){
+	printf("第一个数：%d\n",a);
+	printf("第二个数：%d\n",b);
+}
+
+int main(){
+	void (*p)(int, int);
+	p = printTwoNumber;      // 给函数指针赋值
+	p(1,2);                  // 通过函数指针调用函数，与printTwoNumber(1,2)效果相同
+	return 0;
+} 
+```
+
+所谓回调函数，就是通过函数指针，在其他函数中被调用的函数。
+
+> 以下是来自知乎作者常溪玲的解说：
+>
+> 你到一个商店买东西，刚好你要的东西没有货，于是你在店员那里留下了你的电话，过了几天店里有货了，店员就打了你的电话，然后你接到电话后就到店里去取了货。在这个例子里，你的电话号码就叫回调函数，你把电话留给店员就叫登记回调函数，店里后来有货了叫做触发了回调关联的事件，店员给你打电话叫做调用回调函数，你到店里去取货叫做响应回调事件。
+
+例如：
+
+```c
+# include <stdio.h>
+# include <stdlib.h>
+
+// 获取一个随机数，用到了rand()函数，该函数需引入头文件stdlib.h
+// 该函数作为回调函数，在populateArray()函数中调用
+int getRandomInt(){
+	return rand();
+}
+
+// 填充一个数组
+void populateArray(int *array, int length ,int (*p)()){
+	for(int i = 0; i < length; i++){
+		*(array+i) = p();
+	}
+}
+
+// 输出数组
+void printArray(int *array, int length){
+	for(int i = 0; i < length; i++){
+		printf("%d\t",*(array+i));
+	}
+}
+
+int main(){
+	int array[10];                            // 声明数组
+	populateArray(array, 10, getRandomInt);   // 给数组中的每个元素赋值，填充数组
+	printArray(array, 10);                    // 输出数组
+	return 0;
+}
+```
+
