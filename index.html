@@ -12,9 +12,11 @@
   <!-- docsify 主题 -->
   <link rel="stylesheet" href="./vue.css">
   <link rel="stylesheet" href="./res/css/mycss.css">
-  <link rel="stylesheet" href="./res/css/katex.min.css"/>
+  <link rel="stylesheet" href="./res/css/katex.min.css" />
   <link rel="stylesheet" href="./res/css/toc.css">
   <link rel="stylesheet" href="./res/css/sidebar.min.css" />
+  <link rel="stylesheet" href="./res/css/style.min.css">
+  <link rel="stylesheet" href="./res/css/sweetalert.min.css" media='all' />
 </head>
 
 <body>
@@ -29,7 +31,7 @@
       loadSidebar: true,
       loadFooter: true,
       auto2top: true,
-      
+
       // 最后更新时间
       timeUpdater: {
         text: "<br><hr><br>\n> 最后更新时间: {docsify-updated}",
@@ -43,13 +45,35 @@
       },
       // docsify-copy-code (defaults)
       copyCode: {
-        buttonText : '复制',
-        errorText  : '复制失败',
+        buttonText: '复制',
+        errorText: '复制失败',
         successText: '复制成功'
-      }
+      },
+      // 黑夜模式设置
+      darkMode: {
+        dark: {
+          background: "#1c2022",
+          toggleBtnBg: "#34495e",
+          textColor: "#b4b4b4"
+        },
+        light: {
+          background: "white",
+          toggleBtnBg: "#35966a",
+          textColor: "var(--theme-color)"
+        }
+      },
+      // 搜索框
+      search: {
+        paths: 'auto',
+        placeholder: '🔍 搜索',
+        noData: '😒 找不到结果',
+        // Headline depth, 1 - 6
+        depth: 6,
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      },
     }
   </script>
-  
+
   <!-- emoji表情支持 -->
   <script src="./res/js/emoji.min.js"></script>
   <!-- 数学公式支持 -->
@@ -60,6 +84,12 @@
   <script src="./res/js/toc.js"></script>
   <!-- 复制到粘贴板 -->
   <script src="./res/js/docsify-copy-code.min.js"></script>
+  <!-- 黑夜模式 -->
+  <script src="./res/js/index.min.js"></script>
+  <!-- 搜索框 -->
+  <script src="./res/js/search.min.js"></script>
+
+
   <!-- Docsify v4 -->
   <script src="./docsify-4.11.4.js"></script>
   <!-- 页脚信息 -->
@@ -69,7 +99,32 @@
   <script src="./res/js/prism-java.js"></script>
   <!-- 侧边栏 -->
   <script src="./res/js/docsify-sidebar-collapse.min.js"></script>
-  
+
+  <!-- 回到顶部功能 -->
+  <script src="./res/js/jquery.js"></script>
+  <script src="./res/js/jquery.goup.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.goup({
+        trigger: 100,
+        bottomOffset: 52,
+        locationOffset: 25,
+        //title: 'TOP',
+        titleAsText: true
+      });
+    });
+  </script>
+
+  <!-- 复制提醒 -->
+  <script src="./res/js/sweetalert.min.js"></script>
+  <script>
+    document.body.oncopy = function () {
+      swal("复制成功 ",
+        "若要转载或引用请务必保留原文链接，并申明来源。",
+        "success");
+    };
+  </script>
+
 </body>
 
 </html>
