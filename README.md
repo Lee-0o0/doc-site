@@ -9,6 +9,12 @@
 
 !> 该站点记录了水木子的计算机学习笔记，知识来源于书籍、网络，如有侵权，请联系773702776@qq.com删除
 
+<span id="busuanzi_container_site_pv" style='display:none'>
+    👀 本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    | 🚴‍♂️ 本站总访客数：<span id="busuanzi_value_site_uv"></span> 人
+</span>
 
 ## 学习路线图
 
