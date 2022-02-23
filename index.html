@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>学习资源大合集</title>
+  <title>水木子的笔记本</title>
   <!--网页标题左侧显示-->
   <link rel="icon" href="./res/img/logo.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -29,10 +29,14 @@
       repo: 'https://github.com/Lee-0o0/doc-site', // set the docsify show the corner
 
       loadSidebar: true,
+      sidebarDisplayLevel: 0, // set sidebar display level
       loadFooter: true,
       auto2top: true,
-
+      topMargin: 30, // default: 0
       notFoundPage: '_404.md',
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md', // See #301
+      },
 
       // 最后更新时间
       timeUpdater: {
@@ -43,7 +47,7 @@
       toc: {
         scope: '.markdown-section',
         headings: 'h2, h3, h4',
-        title: '目录',
+        title: '📖 文章目录',
       },
       // docsify-copy-code (defaults)
       copyCode: {
