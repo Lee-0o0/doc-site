@@ -19,8 +19,27 @@ footer{
 }
 #index-title{
     font-size: 30px;
+    vertical-align: bottom;
+}
+#index-logo{
+    vertical-align: bottom;
+}
+.app-name-link img{
+    vertical-align: bottom;
+}
+.app-name-link span{
+    vertical-align: bottom;
 }
 .logo-img-item{
-    width: 40px;
-    height: 40px;
+    margin: 0 10px;
+    width: 35px;
+    height: 35px;
+}
+#busuanzi_container_site_pv{
+    font-size: large;
+    font-weight: bold;
+}
+#busuanzi_container_site_uv{
+    font-size: large;
+    font-weight: bold;
 }
