@@ -74,3 +74,5 @@
 * 工具
     * Git使用教程
     * Markdown与Typora
+* 神奇的网站
+    * [😀 Emoji表情](https://emojipedia.org/)
