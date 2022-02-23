@@ -40,7 +40,7 @@
 
       // 最后更新时间
       timeUpdater: {
-        text: "<br><hr><br>\n> 最后更新时间: {docsify-updated}",
+        text: "<br><hr>\n> 最后更新时间: {docsify-updated}",
         formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}",
       },
       // 自动生成右边目录
@@ -77,6 +77,13 @@
         depth: 6,
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
       },
+      // 分章节
+      pagination: {
+        previousText: '上一节',
+        nextText: '下一节',
+        crossChapter: true,
+        crossChapterText: true,
+      },
     }
   </script>
 
@@ -96,7 +103,8 @@
   <script src="./res/js/search.min.js"></script>
   <!-- 图片放大插件 -->
   <script src="./res/js/zoom-image.min.js"></script>
-
+  <!-- 分章节 -->
+  <script src="./res/js/docsify-pagination.min.js"></script>
   <!-- Docsify v4 -->
   <script src="./docsify-4.11.4.js"></script>
   <!-- 页脚信息 -->
