@@ -211,6 +211,27 @@ int main(){
 ![image-20220220171632512](img/C语言-函数/image-20220220171632512.png)
 
 可以看到形参仍然是复制了一份实参，只不过该参数类型为指针，形参指向的地址与实参指向的地址相同，所以通过形参操作数组，通过实参读取数组，也会看到数组的变化。
+- 练习题：请编写一个函数，用于交换两个整数。
+<details>
+	<summary>参考答案</summary>
+
+		# include <stdio.h>
+
+		void swap(int *a, int *b){
+			int tmp = *a;
+			*a = *b;
+			*b = tmp;
+		}
+		
+		int main(){
+			int a = 1;
+			int b = 2;
+			swap(&a, &b);
+			printf("a=%d\tb=%d",a,b);
+			return 0;
+		}
+
+</details>
 
 
 
