@@ -166,7 +166,7 @@ n = 5
 
 首先，我们要区分向函数传递参数的方式：当向函数传递参数时，形式参数会复制一份实际参数，然后在函数体中，修改的是形式参数，实际参数并没有被修改，即使形参和实参同名也不影响。
 
-![image-20220220165115385](img/C语言-函数/image-20220220165115385.png)
+![image-20220220165115385](https://raw.githubusercontent.com/Lee-0o0/image-store/master/PicGo/2022-02-25/4c0a72ac6d2ba037d112749e325e52f5--4131--4c0a72ac6d2ba037d112749e325e52f5--5a09--origin.png)
 
 当然，还有一种特殊的参数类型：指针。例如，下面的函数就是将数组进行排序：
 
@@ -208,7 +208,7 @@ int main(){
 
 其实，这并不违背复制实参给形参的规则，如图：
 
-![image-20220220171632512](img/C语言-函数/image-20220220171632512.png)
+![image-20220220171632512](https://raw.githubusercontent.com/Lee-0o0/image-store/master/PicGo/2022-02-25/b253abeadf597dfee4322704e52ae4cf--9a73--b253abeadf597dfee4322704e52ae4cf--f40a--origin.png)
 
 可以看到形参仍然是复制了一份实参，只不过该参数类型为指针，形参指向的地址与实参指向的地址相同，所以通过形参操作数组，通过实参读取数组，也会看到数组的变化。
 - 练习题：请编写一个函数，用于交换两个整数。
@@ -216,7 +216,7 @@ int main(){
 	<summary>参考答案</summary>
 
 		# include <stdio.h>
-
+	
 		void swap(int *a, int *b){
 			int tmp = *a;
 			*a = *b;

@@ -133,7 +133,7 @@ int main()
 
 结果：
 
-![image-20211025152749564](img/C语言— —流程控制/image-20211025152749564.png)
+![image-20211025152749564](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-02-25/c3dd9fe2a99cb93bef7aa8d0d97dd46a--03f9--image-20211025152749564.png)
 
 
 
@@ -206,7 +206,7 @@ int main()
 
 结果：
 
-![image-20211025154845651](img/C语言— —流程控制/image-20211025154845651.png)
+![image-20211025154845651](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-02-25/b842557d6419e932486b657154eafc2f--378b--image-20211025154845651.png)
 
 
 
@@ -416,6 +416,6 @@ int main()
 } 
 ```
 
-![image-20211124101638341](img/C语言— —流程控制/image-20211124101638341.png)
+![image-20211124101638341](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-02-25/8dae505255b795ed4462fe3f80c07432--47da--image-20211124101638341.png)
 
 上述程序就是循环的嵌套。

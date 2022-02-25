@@ -14,7 +14,7 @@ int score1, score2, score3...
 
 所谓数组，你可以把它看成是相同类型的变量的集合，如下图：
 
-![image-20220224104317750](img/C语言-数组/image-20220224104317750.png)
+![image-20220224104317750](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-02-25/1a596b8d87b8b153ec05920e0e2cbbe6--f2f4--image-20220224104317750.png)
 
 ## 二、数组的声明与初始化
 数组的声明语法如下：
@@ -33,7 +33,7 @@ int num[6] = {1, 2, 3, 4, 5, 6};
 ```
 上述声明了一个长度为6的整型数组，并且数组中存储的值如下图：
 
-![image-20220224195219356](img/C语言-数组/image-20220224195219356.png)
+![image-20220224195219356](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-02-25/0369dc0c006fb8345b3ff704c14795d1--ad50--image-20220224195219356.png)
 
 初始化时，可以为小于等于数组长度的元素赋值，例如：
 ```c
@@ -52,7 +52,7 @@ int twoDimensionsNum[3][2] ={{1, 2}, {3, 4}, {5, 6}};
 ```
 上述语句声明并初始化了一个3行2列的二维数组，示意图如下：
 
-![image-20220224195413570](img/C语言-数组/image-20220224195413570.png)
+![image-20220224195413570](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-02-25/bdcf20dfcd1122d09c20a8b154643cf9--6774--image-20220224195413570.png)
 
 
 
@@ -138,7 +138,7 @@ for(int i = 0; i < w; i++){
 int num[] = {2,5,3,8};
 ```
 
-![image-20220224200802056](img/C语言-数组/image-20220224200802056.png)
+![image-20220224200802056](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-02-25/c324ebc49f6b30bbc7ed39b3d50015c2--b133--image-20220224200802056.png)
 
 所以，我们可以声明如下整型指针`p`，并给它赋值：
 
@@ -182,11 +182,11 @@ for(int i = 0; i < length; i++){
 
 这是什么鬼？？？其实问题出在`*(num+i)`，`num`指向该二维数组中一维数组的首地址：
 
-![image-20220224215651342](img/C语言-数组/image-20220224215651342.png)
+![image-20220224215651342](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-02-25/457db17fde8657704f7d453ef179484a--e774--image-20220224215651342.png)
 
 当`num+1`时，指向的位置如下：
 
-![image-20220224220214197](img/C语言-数组/image-20220224220214197.png)
+![image-20220225211053633](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-02-25/ec607af40fc39e7a1d4a395ea4ba4dfe--be78--image-20220225211053633.png)
 
 我们可以输出指针存储的值：
 

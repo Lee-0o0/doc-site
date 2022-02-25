@@ -206,7 +206,7 @@ int main()
 
 ==MORE==：关于Dev-cpp如何开启调试模式，请参考资料[1]。
 
-![image-20211018101653792](img/C语言— —运算符与表达式/image-20211018101653792.png)
+![image-20211018101653792](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-02-25/5c3d05bbc760617a9639bd1065f5cb4d--3481--image-20211018101653792.png)
 
 对于第一段程序，汇编语言如下：
 
@@ -554,7 +554,7 @@ int main()
 
 在有些语言中，类似的语句是不合法的，例如Java：
 
-![image-20211019095518121](img/C语言— —运算符与表达式/image-20211019095518121.png)
+![image-20211019095518121](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-02-25/8c147c730cd36b66d9ffed881a276aa6--3e1d--image-20211019095518121.png)
 
 编译器提示第3、5、7行不是语句。
 
@@ -598,7 +598,7 @@ int main()
 
 综上所述，自动类型转换的方向如下：
 
-![img](img/C语言— —运算符与表达式/134S535R-0.png)
+![img](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-02-25/ad28f8db8c171ebb6a1b296211ddcc2f--7658--134S535R-0.png)
 
 例如，以下的例子就包含了自动类型转换：
 

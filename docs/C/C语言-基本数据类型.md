@@ -9,7 +9,7 @@
 
 在数学中，数的分类如下：
 
-![image-20211005144225105](img/C语言— —基本数据类型/image-20211005144225105.png)
+![image-20211005144225105](https://raw.githubusercontent.com/Lee-0o0/image-store/master/PicGo/2022-02-25/6268a73590bd98b5a4c90d7103b45e71--2c30--image-20211005144225105.png)
 
 例如，数字 1 的最小类型就是正整数，最大类型就是实数。
 
@@ -85,7 +85,7 @@ int main(){
 }
 ```
 
-![image-20211005135445341](img/C语言— —基本数据类型/image-20211005135445341.png)
+![image-20211005135445341](https://raw.githubusercontent.com/Lee-0o0/image-store/master/PicGo/2022-02-25/c1cad14a50edee7b5bd57f0c7cc276cd--633a--image-20211005135445341.png)
 
 
 
@@ -127,7 +127,7 @@ int main(){
 
 有如下图片，表示二进制序列：
 
-![image-20211017142525325](img/C语言— —基本数据类型/image-20211017142525325.png)
+![image-20211017142525325](https://raw.githubusercontent.com/Lee-0o0/image-store/master/PicGo/2022-02-25/7c4d071d25c2215314e8c2f012f67991--c8c4--image-20211017142525325.png)
 
 <p align=center>图源：参考资料[2]</p>
 
@@ -167,7 +167,7 @@ $$
 
 经过二进制小数和科学计数法的铺垫，我们可以继续学习浮点数的存储了，该存储方式是IEEE提出的，即根据二进制的科学计数法，存储有效数和指数，而不是直接存储二进制数。因此在浮点数存储中，将存储区域分为三部分：符号位、有效数部分和指数部分。单精度和双精度浮点数的存储分布如下：
 
-![image-20211017144319040](img/C语言— —基本数据类型/image-20211017144319040.png)
+![image-20211017144319040](https://raw.githubusercontent.com/Lee-0o0/image-store/master/PicGo/2022-02-25/4acbd5085020f04af2a0cb03bc618ed9--10d8--image-20211017144319040.png)
 
 <p align=center>图源：参考资料[2]</p>
 
@@ -181,7 +181,7 @@ $$
 
 在这种情况下，exp的值不等于0，也不等于255，即比特位不全为0也不全为1。
 
-![image-20211017145705695](img/C语言— —基本数据类型/image-20211017145705695.png)
+![image-20211017145705695](https://raw.githubusercontent.com/Lee-0o0/image-store/master/PicGo/2022-02-25/d08c6db361eee2167deb0951ec1b229a--afe1--image-20211017145705695.png)
 
 在这种情况下，指数被解释为以偏置形式表示的有符号整数，也就是说，指数的值$n=e-Bias$，其中e是exp表示的无符号整数，Bias是一个等于$2^{k-1}-1$的偏置值（单精度为127，双精度是1023）。由此，对于单精度来说，指数的取值范围是[-126,127]；对于双精度来说，指数的取值范围是[-1022,1023]。
 
@@ -201,7 +201,7 @@ frac部分被解释为小数值f，其中$0\leq f < 1$，其二进制表示是$0
 
 在这种情况下，exp全为0。
 
-![image-20211017145723113](img/C语言— —基本数据类型/image-20211017145723113.png)
+![image-20211017145723113](https://raw.githubusercontent.com/Lee-0o0/image-store/master/PicGo/2022-02-25/91b9e7b42c298d2bc66eeee4f42fde21--1b8c--image-20211017145723113.png)
 
 在这种情况下，指数值为`n = 1 - Bias = -126`，有效数的值`M = f`（即没有隐含的整数1了）。
 
@@ -222,13 +222,13 @@ frac部分被解释为小数值f，其中$0\leq f < 1$，其二进制表示是$0
 
 - frac为全0
 
-![image-20211017145737536](img/C语言— —基本数据类型/image-20211017145737536.png)
+![image-20211017145737536](https://raw.githubusercontent.com/Lee-0o0/image-store/master/PicGo/2022-02-25/b0b47908272e56029ce8aeb7fd4267a9--0da1--image-20211017145737536.png)
 
 在这种情况下，单精度浮点数值为无穷大$\infty$，根据符号位区分正负。
 
 - frac不为0
 
-![image-20211017145752575](img/C语言— —基本数据类型/image-20211017145752575.png)
+![image-20211017145752575](https://raw.githubusercontent.com/Lee-0o0/image-store/master/PicGo/2022-02-25/d143a9e88eadc207c547c99b9eb0632b--245d--image-20211017145752575.png)
 
 在这种情况下，结果为NaN，表示非数字（Not a Number）。例如，当计算$\infty - \infty$时，结果就是NaN。
 
