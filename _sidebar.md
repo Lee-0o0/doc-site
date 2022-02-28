@@ -30,7 +30,7 @@
         * [数据结构— —树]
     * 算法
         * [算法— —查找算法]
-        * [算法— —排序算法]
+        * [算法— —排序算法](docs/数据结构与算法/算法-排序算法.md)
 * 操作系统
     * 操作系统原理
     * Windows操作系统
@@ -74,5 +74,6 @@
 * 工具
     * Git使用教程
     * Markdown与Typora
+        * [Typora使用教程](docs/工具/Typora使用教程.md)
 * 神奇的网站
     * [😀 Emoji表情](https://emojipedia.org/)
