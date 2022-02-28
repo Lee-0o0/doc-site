@@ -2,7 +2,11 @@
 <img id="index-logo" src="./res/img/logo.ico" /><span id="index-title">&nbsp;水木子的笔记本</span>
 </center>
 
-!> 该站点记录了水木子的计算机学习笔记，知识来源于书籍、网络，如有侵权，请联系773702776@qq.com删除
+!> 该站点记录了水木子的计算机学习笔记，知识来源于书籍、网络，如有侵权，请联系773702776@qq.com删除！
+
+!> 如果您发现文章有误，请联系773702776@qq.com修正，非常感谢您的指正！
+
+!> 如果您认为本站内容对您有帮助，请给本仓库点一个⭐，非常感谢！
 
 <center>
 <a href="https://github.com/Lee-0o0"><img class="logo-img-item" src="./res/img/github.png" /></a>
