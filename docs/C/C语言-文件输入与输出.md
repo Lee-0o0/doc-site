@@ -62,11 +62,18 @@ FILE * fopen ( const char * filename, const char * mode );
 
 #### 2.2.2 操作二进制流
 
-二进制流的读取使用函数`fread()`，函数声明如下：
+二进制流的读取使用函数`fread()`，写入数据到二进制流中使用函数`fwrite()`，函数声明如下：
 
 ```c
 size_t fread ( void * ptr, size_t size, size_t count, FILE * stream );
+size_t fwrite ( const void * ptr, size_t size, size_t count, FILE * stream );
 ```
+
+- `ptr`是一个指向用于保存数据的内存位置的指针；
+- `size`是每个元素的字节数；
+- `count`是要写入多少个元素；
+- `stream`是要读取或写入的流；
+- 函数返回值是实际读取或写入的元素数目（不是字节数），如果输入过程中遇到了文件结尾或输出过程中出现了错误，这个数字可能比请求的元素数目小；
 
 
 
@@ -80,13 +87,13 @@ size_t fread ( void * ptr, size_t size, size_t count, FILE * stream );
 int fclose ( FILE * stream );
 ```
 
-该函数接受一个`FILE`指针类型参数`stream`，表示需要关闭的流。如果流成功关闭，则返回0；否则，返回`EOF`。
+该函数接受一个`FILE`指针类型参数`stream`，表示需要关闭的流。如果流成功关闭，则返回0；否则，返回`EOF`（-1）。
 
 
 
+## 3. 刷新和定位函数
 
 
-## 3. 
 
 
 
