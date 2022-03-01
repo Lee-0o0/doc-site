@@ -73,7 +73,7 @@ int main()
 }
 ```
 
-![image-20211130093935334](img/C语言— —格式化输入输出/image-20211130093935334.png)
+![image-20211130093935334](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-03-01/aacc8a94e18c03ed02c33eec1af16b17--d9a8--image-20211130093935334.png)
 
 
 
@@ -101,7 +101,7 @@ int main()
 
 完整的length表如下：
 
-![image-20211130150929326](img/C语言— —格式化输入输出/image-20211130150929326.png)
+![image-20211130150929326](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-03-01/42fc4647d4c77bdb84317c4acd7bf719--b6e4--image-20211130150929326.png)
 
 <p align=center><font color=grey>图源：参考资料[1]</font></p>
 
@@ -324,7 +324,7 @@ int scanf ( const char * format, ... );
 
 - 长度`length`用于修改有些格式代码的含义，即用于转换输入的数据类型，如下表：
 
-    ![image-20220301212957054](img/C语言-格式化输入输出/image-20220301212957054-16461414850681.png)
+    ![image-20220301212957054](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-03-01/82c05e89399dc901963d7cdb833cfd5e--560a--image-20220301212957054-16461414850681.png)
 
     <p align=center><font color=grey>图源：参考资料[2]</font></p>
 
