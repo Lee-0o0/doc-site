@@ -25,10 +25,16 @@ char str[] = {'h','e','l','l','o','\0'};
 当然，我们还可以用更简化的语法声明字符串：
 
 ```c
-char str[] = "hello";
+char str[] = "hello";          // 方式一
+
+char str[] = "你好"",世界";     // 方式二
+
+char str[] = "hello world"\   // 方式三
+    		 "你好，世界"\
+    		 "\n新的一天开始了~";
 ```
 
-使用这种方式声明字符串，编译器会自动在最后加上一个空字符。
+使用上面的方式声明字符串，编译器会自动在最后加上一个空字符。对于方式一，很自然，没什么可说的；对于方式二，我们可以将两个字符串常量放在一起，编译器会自动将两个字符串常量拼接在一起，`str`为`你好,世界`；对于方式三，如果字符串很长，我们可以先按照方式二将其拆分为多个字符串常量，然后放在多行，并在每行的末尾加上一个反斜杠`\`，表示字符串拼接。
 
 
 
@@ -44,7 +50,7 @@ char str[] = "hello";
 size_t strlen ( const char * str );    // size_t是unsigned int的别名
 ```
 
-`strlen(str)`函数用于计算字符串`str`的长度：
+`strlen(str)`函数用于计算字符串`str`的长度（**以字节为单位**）：
 
 ```c
 # include <stdio.h>
@@ -63,6 +69,37 @@ int main(){
 输出：`5`
 
 注意：字符串的长度不包括结尾的空字符。
+
+我们强调`strlen()`输出的字符串长度是以字节为单位，看如下例子：
+
+```c
+# include <stdio.h>
+# include <string.h>
+
+int main(){
+	char str[] = "你好";
+	printf("strlen(str) = %d\n",strlen(str)); 
+	return 0;
+}
+```
+
+输出：`strlen(str) = 4`
+
+明明`str`字符串只包含两个字符`你`和`好`，为什么长度会为4呢？
+
+要知道原因，你需要了解[编码](编码.md)的相关知识。
+
+在我们的Dev-cpp中，默认的编码方式是GBK，在GBK编码中，每个汉字占据两个字节。如果我们使用[Visual Studio Code](https://code.visualstudio.com/)打开源代码，界面如下：
+
+![image-20220302200320914](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-03-02/04815bdaa3903f735d430a19a0dcdf9c--a986--image-20220302200320914.png)
+
+可以看到在Visual Studio Code中，是以UTF-8编码格式打开的，并且`你好`变成了乱码。如果我们在Visual Studio Code中修改`str`字符串为`你好`，再以UTF-8编码保存源文件，然后在Dev-Cpp中查看，界面如下：
+
+![image-20220302200543981](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-03-02/45120028a09125b9683f3099c252255c--7589--image-20220302200543981.png)
+
+编译运行后，输出结果为：`strlen(str) = 6`。这是因为此时的`你好`为UTF-8编码，每个汉字占据3个字节。
+
+`strlen()`与`sizeof()`的区别：`strlen()`函数不包括末尾的空字符，`sizeof()`会包括末尾的空字符。
 
 
 
@@ -171,3 +208,5 @@ world！
 [1] https://www.cplusplus.com/reference/cstring/
 
 [2] http://c.biancheng.net/cpp/html/2716.html
+
+[3] https://blog.csdn.net/qq_43338695/article/details/97621375
