@@ -666,7 +666,6 @@ $$
 
 结果如下：
 $$
-\begin{equation}
 \left\{
              \begin{array}{lr}
              x=\dfrac{3\pi}{2}(1+2t)\cos(\dfrac{3\pi}{2}(1+2t)), &  \\
@@ -674,7 +673,6 @@ $$
              z=\dfrac{3\pi}{2}(1+2t)\sin(\dfrac{3\pi}{2}(1+2t)), &  
              \end{array}
 \right.
-\end{equation}
 $$
 
 现在我们一一来解释：
@@ -709,14 +707,12 @@ $$
 结果如下：
 $$
 y=
-\begin{equation}
 	\left\{
 		\begin{array}{lr}
 		x-1 ,& x \leq 0\\
 		x+1 ,& x>0
 		\end{array}
 	\right.
-\end{equation}
 $$
 就是在`\begin{equation}`前加`y=`即可。
 

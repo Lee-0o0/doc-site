@@ -76,5 +76,9 @@
     * Git使用教程
     * Markdown与Typora
         * [Typora使用教程](docs/工具/Typora使用教程.md)
+        * [Typora画图教程](docs/工具/Typora画图教程.md)
+        * [Typora图库搭建教程](docs/工具/Typora图床搭建教程.md)
+* 其他
+    * [编码](docs/其他/编码.md)
 * 神奇的网站
     * [😀 Emoji表情](https://emojipedia.org/)
