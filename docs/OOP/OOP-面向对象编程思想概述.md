@@ -96,3 +96,62 @@ littleBlackDog.bark();           // 输出 汪汪汪...
 ```
 
 其实，类与C语言中的结构体类型，只不过类中多了方法（函数）。
+
+
+
+## 3. 类成员与对象成员
+
+在上一节中，我们通过`对象名.成员名`方式来访问属性或调用方法，这样的属性或方法称为对象成员。
+
+本节我们将学习类成员和对象成员。
+
+- 类成员：类成员属于类，不属于一个具体的对象，我们可以通过`类名.成员名`来访问类成员；
+- 对象成员：对象成员属于一个具体的对象，我们可以通过`对象名.成员名`来访问对象成员；
+
+那么我们要如何区分类成员和对象成员呢？很简单，只需要在成员（属性或方法）声明前加上关键字`static`，就可以使其变为类成员。例如：
+
+```java
+public class Dog {
+    public static long NUMBER;        // 类成员属性
+    public static void count(){       // 类成员方法
+        System.out.println("狗的总数量为："+NUMBER); 
+    }
+    
+    public String name;
+    public String gender;
+    public Date birthday;
+
+    public void bark(){
+        System.out.println("汪汪汪...");
+    }
+}
+```
+
+我们在之前的例子中，加入了类成员属性和类成员方法，使用类成员如下：
+
+```java
+Dog.NUMBER = 1000;
+Dog.count();
+```
+
+需要注意的是，我们不能在类成员方法中使用对象成员，因为并不能对象成员存在于对象中，而对象并不一定会在程序中创建，下面的做法是错误的：
+
+```java
+public class Dog {
+    public static long NUMBER;        
+    public static void count(){       
+        System.out.println("name="+name);    // 错误：在类成员方法中使用对象成员属性
+        bark();                              // 错误：在类成员方法中调用对象成员方法
+        System.out.println("狗的总数量为："+NUMBER); 
+    }
+    
+    public String name;
+    public String gender;
+    public Date birthday;
+
+    public void bark(){
+        System.out.println("汪汪汪...");
+    }
+}
+```
+
