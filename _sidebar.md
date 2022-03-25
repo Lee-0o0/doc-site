@@ -23,6 +23,8 @@
     * [OOP三大特性— —多态](docs/OOP/OOP-多态.md)
     * [UML图— —类图](docs/OOP/UML图-类图.md)
 
+* 汇编语言
+
 * 数据结构与算法
     * 数据结构
         * [数据结构— —顺序表]
@@ -70,14 +72,17 @@
     * HTML
     * CSS
     * JavaScript
+    * 微信小程序
 * 客户端技术
     * WinForm
-* 工具
+    * WPF
+* 工具和框架
     * Git使用教程
     * Markdown与Typora
         * [Typora使用教程](docs/工具/Typora使用教程.md)
         * [Typora画图教程](docs/工具/Typora画图教程.md)
         * [Typora图库搭建教程](docs/工具/Typora图床搭建教程.md)
+    * Thrift使用
 * 其他
     * [编码](docs/其他/编码.md)
 * 神奇的网站
