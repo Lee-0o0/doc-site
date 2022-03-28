@@ -529,9 +529,110 @@ db.students.createIndex({"name":1},{"name":"index_students_name"})
 
 ## 9. 聚合
 
+MongoDB 中聚合(aggregate)主要用于处理数据(诸如统计平均值，求和等)，并返回计算后的数据结果。类似于SQL中的`count(*)`。
 
+在MongoDB中，聚合分为两类：
 
+- 单一目的聚合方法：简单，只可用于单一目的
+- 聚合管道：推荐使用的方法
 
+我们首先从简单的聚合方法学习聚合：单一目的聚合方法
+
+|                     方法                      |                             说明                             |
+| :-------------------------------------------: | :----------------------------------------------------------: |
+| db.collection.estimatedDocumentCount(options) |        返回一个集合中的文档数量，该数量可能是不准确的        |
+|      db.collection.count(query,options)       |                 统计符合query条件的文档数量                  |
+| db.collection.distinct(field, query, options) | 返回一个数组，该数组包含符合条件的文档指定字段值，字段值在数组中唯一 |
+
+例如：
+
+![image-20220328160746347](img/MongoDB使用教程/image-20220328160746347.png)
+
+接下来重点讲解聚合管道的用法。
+
+聚合管道包含一个或多个用于处理文档的阶段：
+
+- 每个阶段在输入文档中进行一个操作，例如，某个阶段可以过滤文档、对文档进行分组和计算值；
+- 从一个阶段输出的文档座位下一个阶段的输入文档；
+- 聚合管道返回每组文档的结果，例如，返回每组文档的总值、平均值、最大值和最小值；
+
+MongoDB中聚合的方法使用`aggregate()`，语法如下：
+
+```txt
+db.collection_name.aggregate([ { <stage> }, ... ])
+```
+
+接下来先以一个简单的例子讲解聚合管道的用法，首先准备数据，数据来源于[MongoDB官网](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/)：
+
+```txt
+db.orders.insertMany( [
+   { _id: 0, name: "Pepperoni", size: "small", price: 19,
+     quantity: 10, date: ISODate( "2021-03-13T08:14:30Z" ) },
+   { _id: 1, name: "Pepperoni", size: "medium", price: 20,
+     quantity: 20, date : ISODate( "2021-03-13T09:13:24Z" ) },
+   { _id: 2, name: "Pepperoni", size: "large", price: 21,
+     quantity: 30, date : ISODate( "2021-03-17T09:22:12Z" ) },
+   { _id: 3, name: "Cheese", size: "small", price: 12,
+     quantity: 15, date : ISODate( "2021-03-13T11:21:39.736Z" ) },
+   { _id: 4, name: "Cheese", size: "medium", price: 13,
+     quantity:50, date : ISODate( "2022-01-12T21:23:13.331Z" ) },
+   { _id: 5, name: "Cheese", size: "large", price: 14,
+     quantity: 10, date : ISODate( "2022-01-12T05:08:13Z" ) },
+   { _id: 6, name: "Vegan", size: "small", price: 17,
+     quantity: 10, date : ISODate( "2021-01-13T05:08:13Z" ) },
+   { _id: 7, name: "Vegan", size: "medium", price: 18,
+     quantity: 10, date : ISODate( "2021-01-13T05:10:13Z" ) }
+] )
+```
+
+统计中等大小的每种披萨的销售数量：
+
+```txt
+db.orders.aggregate([
+	{
+		// 阶段一：筛选大小为中等的披萨销售记录
+		$match: {"size": "medium"}
+	},
+	{
+		// 阶段二：按披萨名分组，然后统计每个组的销售量
+		$group: {_id: "$name", totalQuantity: {$sum: "$quantity"}}
+	}
+])
+```
+
+结果：
+
+```txt
+{ "_id" : "Pepperoni", "totalQuantity" : 20 }
+{ "_id" : "Cheese", "totalQuantity" : 50 }
+{ "_id" : "Vegan", "totalQuantity" : 10 }
+```
+
+完整的聚合管道阶段参考链接：https://www.mongodb.com/docs/manual/reference/operator/aggregation-pipeline/，下面简单说说上面两个阶段：
+
+- `$match`：匹配阶段，将不符合条件的文档过滤出去使之不进入下一阶段，语法格式如下：
+
+    ```txt
+    { $match: { <query> } }
+    ```
+
+- `$group`：分组阶段，语法格式如下：
+
+    ```txt
+    {
+      $group:
+        {
+          _id: <expression>, // Group By Expression
+          <field1>: { <accumulator1> : <expression1> },
+          ...
+        }
+     }
+    ```
+
+    - `_id`是必须的，指定分组的字段；
+    - `field`是可选的，统计分组的其他数据；
+
+注意，除了`$out`、`$merge`和`$geoNear`阶段，其他阶段可以在一个管道中多次出现。
 
 
 
