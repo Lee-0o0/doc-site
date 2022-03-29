@@ -638,11 +638,80 @@ db.orders.aggregate([
 
 ## 10. 在Java中操作MongoDB
 
+本节主要介绍如何在Java程序中操作MongoDB数据库。
 
+### 10.1 环境搭建
+
+首先，我们需要在程序中引入MongoDB-Java-Driver包，下载地址：https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver：
+
+![image-20220329092724005](img/MongoDB使用教程/image-20220329092724005.png)
+
+我们选择最新的Jar包，由于此处没创建Maven工程，所以下载Jar包，然后引入项目中。项目结构如下：
+
+![image-20220329093447777](img/MongoDB使用教程/image-20220329093447777.png)
+
+
+
+### 10.2 连接数据库
+
+在Java代码中连接数据库之前，需要在本地启动MongoDB数据库服务。
+
+我们可以使用如下代码连接到本地的MongoDB数据库，并打印出集合`students`中的文档数量：
+
+```java
+public static void main(String[] args) {
+    try{
+        MongoClient mongoClient = new MongoClient("localhost",27017);
+
+        MongoDatabase mydb = mongoClient.getDatabase("mydb");
+        long studentsNum = mydb.getCollection("students").countDocuments();
+        System.out.println(studentsNum);
+
+    }catch (Exception e){
+        System.out.println(e.getMessage());
+    }
+}
+```
+
+
+
+### 10.3 查询文档
+
+当我们连接到MongoDB数据库后，可以查询文档并输出文档内容：
+
+```java
+public static void main(String[] args) {
+    try{
+        // 1. 连接到MongoDB服务
+        MongoClient mongoClient = new MongoClient("localhost",27017);
+        // 2. 获取数据库mydb
+        MongoDatabase mydb = mongoClient.getDatabase("mydb");
+        // 3. 获取数据库中集合students
+        MongoCollection<Document> students = mydb.getCollection("students");
+        // 4. 查询该集合所有文档并输出
+        FindIterable<Document> documents = students.find();
+        MongoCursor<Document> cursor = documents.iterator();
+        while (cursor.hasNext()){
+            System.out.println(cursor.next());
+        }
+
+    }catch (Exception e){
+        System.out.println(e.getMessage());
+    }
+}
+```
+
+结果如下：
+
+![image-20220329100236686](img/MongoDB使用教程/image-20220329100236686.png)
 
 
 
 ## 11. 事务
+
+
+
+## 12. 
 
 
 
