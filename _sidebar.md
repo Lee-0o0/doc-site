@@ -38,6 +38,11 @@
     * 操作系统原理
     * Windows操作系统
     * Linux操作系统
+        * [Linux简介](docs/操作系统/Linux/Linux简介.md)
+        * [Linux系统目录结构]
+        * [Linux文件与目录]
+        * [vim的使用]
+        * [在Linux上安装软件]
 
 * 计算机网络
 
