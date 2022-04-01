@@ -21,7 +21,7 @@
     * [OOP三大特性— —封装](docs/OOP/OOP-封装.md)
     * [OOP三大特性— —继承](docs/OOP/OOP-继承.md)
     * [OOP三大特性— —多态](docs/OOP/OOP-多态.md)
-    * [UML图— —类图](docs/OOP/UML图-类图.md)
+    * [UML图— —类图](docs/设计模式/UML图-类图.md)
 
 * 汇编语言
 
