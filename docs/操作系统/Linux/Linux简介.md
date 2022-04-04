@@ -6,7 +6,8 @@
 ## 1. Linux简介
 Linux是一个操作系统，Linux内核最初由林纳斯·托瓦兹（Linus Torvalds）编写。
 
-<img src="img/Linux简介/170px-Linus_Torvalds.jpeg" alt="img"  />
+![](img/Linux简介/170px-Linus_Torvalds.jpeg)
+
 <center><span font="color:gray">图源：维基百科</span></center>
 
 ## 2. Linux发行版
