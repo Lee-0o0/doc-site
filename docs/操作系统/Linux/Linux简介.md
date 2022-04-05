@@ -1,4 +1,4 @@
-# Linux简介
+# Linux— —Linux简介
 本文简单介绍Linux系统。
 
 
