@@ -41,7 +41,7 @@
     * Windows操作系统
     * Linux操作系统
         * [Linux简介](docs/操作系统/Linux/Linux简介.md)
-        * [Linux系统目录结构]
+        * [Linux文件系统基础](docs/操作系统/Linux/文件系统基础.md)
         * [Linux文件与目录]
         * [vim的使用]
         * [在Linux上安装软件]
