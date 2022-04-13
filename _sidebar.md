@@ -44,8 +44,8 @@
     * Linux操作系统
         * [Linux简介](docs/操作系统/Linux/Linux简介.md)
         * [Linux文件系统基础](docs/操作系统/Linux/文件系统基础.md)
-        * [Linux文件与目录]
-        * [vim的使用]
+        * [Linux文本文件内容管理](docs/操作系统/Linux/文本文件内容管理.md)
+        * [Linux用户和用户组管理](docs/操作系统/Linux/用户和用户组管理.md)
         * [在Linux上安装软件]
 
 * 计算机网络
