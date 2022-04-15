@@ -46,6 +46,7 @@
         * [Linux文件系统基础](docs/操作系统/Linux/文件系统基础.md)
         * [Linux文本文件内容管理](docs/操作系统/Linux/文本文件内容管理.md)
         * [Linux用户和用户组管理](docs/操作系统/Linux/用户和用户组管理.md)
+        * [Linux文件权限管理](docs/操作系统/Linux/文件权限管理.md)
         * [在Linux上安装软件]
 
 * 计算机网络
