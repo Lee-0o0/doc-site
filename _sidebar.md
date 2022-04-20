@@ -151,7 +151,9 @@
         * [WPF-样式](docs/客户端技术/WPF/WPF-样式.md)
         * [WPF-绑定](docs/客户端技术/WPF/WPF-绑定.md)
 * 工具和框架
-    * [Git使用教程](docs/工具/Git使用教程.md)
+    * Git
+        * [Git使用教程](docs/工具/Git使用教程.md)
+        * [Git控制台中文乱码问题](docs/工具/Git控制台中文乱码问题.md)
     * Markdown与Typora
         * [Typora使用教程](docs/工具/Typora使用教程.md)
         * [Typora画图教程](docs/工具/Typora画图教程.md)
