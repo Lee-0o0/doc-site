@@ -142,7 +142,8 @@
     * HTML
     * CSS
         * [CSS-入门](docs/前端/CSS-入门.md)
-        * [CSS-继承与层叠](docs/前端/CSS-继承与层叠md)
+        * [CSS-继承与层叠](docs/前端/CSS-继承与层叠.md)
+        * [CSS-盒模型](docs/前端/CSS-和模型.md)
     * JavaScript
     * 微信小程序
 * 客户端技术
