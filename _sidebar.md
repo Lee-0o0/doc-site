@@ -143,7 +143,9 @@
     * CSS
         * [CSS-入门](docs/前端/CSS-入门.md)
         * [CSS-继承与层叠](docs/前端/CSS-继承与层叠.md)
+        * [CSS-选择器]
         * [CSS-盒模型](docs/前端/CSS-和模型.md)
+        * [CSS-布局]
     * JavaScript
     * 微信小程序
 * 客户端技术
@@ -162,6 +164,7 @@
         * [Typora画图教程](docs/工具/Typora画图教程.md)
         * [Typora图库搭建教程](docs/工具/Typora图床搭建教程.md)
     * Thrift使用
+    * [Nginx使用](docs/工具/Nginx.md)
 * 其他
     * [编码](docs/其他/编码.md)
 * 神奇的网站
