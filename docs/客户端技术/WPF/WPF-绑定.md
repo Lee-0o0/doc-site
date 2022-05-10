@@ -58,7 +58,7 @@ public class Student : INotifyPropertyChanged
 
 注意，如果要让该类某个属性具备通知Binding该属性发生了变化，需要实现`INotifyPropertyChanged`接口，并在属性set语句中激发`PropertyChanged`事件。
 
-然后在视图层防止一个文本框和按钮：
+然后在视图层放置一个文本框和按钮：
 
 ```xaml
 <Window x:Class="WPF_04_Binding.MainWindow"
@@ -124,7 +124,9 @@ public partial class MainWindow : Window
 
 
 
-## 3. Binding的路径
+## 3. Binding的源与路径
+
+
 
 所谓绑定的路径，就是选择Binding源中的哪个属性需要绑定到Binding目标中。
 
