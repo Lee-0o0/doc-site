@@ -8,11 +8,11 @@
 
 选择创建maven-webapp项目：
 
-![image-20210118111424728](img/SSM进阶— —SSM整合/image-20210118111424728.png)
+![image-20210118111424728](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-05/864976c321aa76b5701ff06c4e10d687--f90e--image-20210118111424728.png)
 
 注意设置maven的配置文件和本地仓库：
 
-![image-20210118111554733](img/SSM进阶— —SSM整合/image-20210118111554733.png)
+![image-20210118111554733](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-05/f8c5ac474b196cfd54111d7ce3182bc7--f9d0--image-20210118111554733.png)
 
 项目创建完成后如下：
 
@@ -34,13 +34,13 @@
   </properties>
   ```
 
-![image-20210118111830320](img/SSM进阶— —SSM整合/image-20210118111830320.png)
+![image-20210118111830320](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-05/f8868a5e25921fcb4c65ed785ab4fba6--dafe--image-20210118111830320.png)
 
 
 
 然后在main目录下创建源码文件夹和资源文件夹：
 
-![image-20210118112124553](img/SSM进阶— —SSM整合/image-20210118112124553.png)
+![image-20210118112124553](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-05/b7e4af6ced27cb5cd08c6019ba34dc1c--d432--image-20210118112124553.png)
 
 
 
@@ -514,7 +514,7 @@ jdbc.password=123456
 
 在上述配置完成后，最终项目结构如下：
 
-![image-20210119214413766](img/SSM进阶— —SSM整合/image-20210119214413766.png)
+![image-20210119214413766](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-05/90aa512508230de1466414634173e1e9--c2fa--image-20210119214413766.png)
 
 
 
@@ -522,7 +522,7 @@ jdbc.password=123456
 
 配置Tomcat然后启动项目：
 
-![image-20210119214145017](img/SSM进阶— —SSM整合/image-20210119214145017.png)
+![image-20210119214145017](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-05/8bbc47dda2c92f14940ef3332d8668c2--1f07--image-20210119214145017.png)
 
 
 
@@ -530,7 +530,7 @@ jdbc.password=123456
 
 启动项目，浏览器访问`http://localhost:8080/accounts`，结果如下：
 
-![image-20210119214246481](img/SSM进阶— —SSM整合/image-20210119214246481.png)
+![image-20210119214246481](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-05/5e41944c54f21ecc732dc2acd13a17f6--8eeb--image-20210119214246481.png)
 
 
 
@@ -544,7 +544,7 @@ java.lang.AbstractMethodError:org.mybatis.spring.transaction.SpringManagedTransa
 
 问题定位：spring、mybatis、mybatis-spring版本不兼容
 
-![image-20210119215240994](img/SSM进阶— —SSM整合/image-20210119215240994.png)
+![image-20210119215240994](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-05/e9e84121d80bc3984d047c21a5baea51--4aa6--image-20210119215240994.png)
 
 参考资料：https://www.cnblogs.com/beppezhang/p/6118661.html
 
@@ -558,7 +558,7 @@ java.lang.AbstractMethodError:org.mybatis.spring.transaction.SpringManagedTransa
 
 File-->Project Structure-->左侧Project Settings-->选择Artifacts-->右侧选择Output Layer-->Available Elements-->鼠标右键选择 Put into Output Root
 
-![image-20210119215204235](img/SSM进阶— —SSM整合/image-20210119215204235.png)
+![image-20210119215204235](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-05/f2a44406b6ed0f0ec06e498cb8c8863f--98dd--image-20210119215204235.png)
 
 
 
