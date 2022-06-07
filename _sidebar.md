@@ -1,5 +1,5 @@
 * 导读
-    * [主页](README.md)
+    * [主页](Index.md)
     * [关于](About.md)
 * C语言教程
     * [C语言— —编程语言与Hello World](docs/C/C语言-编程语言与HelloWorld.md)
