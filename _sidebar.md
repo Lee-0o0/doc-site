@@ -161,6 +161,7 @@
     * Git
         * [Git使用教程](docs/工具/Git使用教程.md)
         * [Git控制台中文乱码问题](docs/工具/Git控制台中文乱码问题.md)
+        * [Git设置SSH key](docs/工具/Git配置SSH密钥.md)
     * Markdown与Typora
         * [Typora使用教程](docs/工具/Typora使用教程.md)
         * [Typora画图教程](docs/工具/Typora画图教程.md)
