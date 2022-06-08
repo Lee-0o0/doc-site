@@ -39,7 +39,8 @@
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md', // See #301
       },
-      routerMode: 'history',
+      // 去掉URL中的#，但是Github不支持
+      // routerMode: 'history',
 
       // 最后更新时间
       timeUpdater: {
