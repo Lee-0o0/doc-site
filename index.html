@@ -25,6 +25,7 @@
   <script>
     window.$docsify = {
       name: '<img src="./res/img/logo.ico"><span>&nbsp;水木子的笔记本</span>',
+      nameLink: "/",
 
       repo: 'https://github.com/Lee-0o0/doc-site', // set the docsify show the corner
 
@@ -34,10 +35,11 @@
       auto2top: true,
       topMargin: 30, // default: 0
       notFoundPage: '_404.md',
-      homepage: 'Index.md',
+      homepage: 'Home.md',
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md', // See #301
       },
+      routerMode: 'history',
 
       // 最后更新时间
       timeUpdater: {
@@ -123,6 +125,7 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <!-- 分章节 -->
   <script src="./res/js/docsify-pagination.min.js"></script>
+  <!-- 统计字数 -->
   <script src="./res/js/countable.min.js"></script>
   <!-- Docsify v4 -->
   <script src="./docsify-4.11.4.js"></script>

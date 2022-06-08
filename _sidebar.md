@@ -1,6 +1,7 @@
 * 导读
-    * [主页](Index.md)
+    * [首页](/)
     * [关于](About.md)
+    * [学习路线](Route.md)
 * C语言教程
     * [C语言— —编程语言与Hello World](docs/C/C语言-编程语言与HelloWorld.md)
     * [C语言— —进制](docs/C/C语言-进制.md)
