@@ -74,6 +74,9 @@
     * Java进阶
         * [泛型]
         * [集合]
+        * [日志框架](docs/Java/Java进阶/日志/Java进阶-日志技术.md)
+        * [日期时间](docs/Java/Java进阶/时间/Java进阶-日期时间.md)
+        * 多线程
         * [Java 8 特性]
         * [Java 9 特性]
     * Java虚拟机（JVM）
@@ -168,7 +171,7 @@
         * [Typora使用教程](docs/工具/Typora使用教程.md)
         * [Typora画图教程](docs/工具/Typora画图教程.md)
         * [Typora图库搭建教程](docs/工具/Typora图床搭建教程.md)
-    * Thrift使用
+    * [Thrift使用](docs/工具/RPC-Thrift入门.md)
     * [Nginx使用](docs/工具/Nginx.md)
 * 其他
     * [编码](docs/其他/编码.md)

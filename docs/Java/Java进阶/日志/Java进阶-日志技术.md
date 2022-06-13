@@ -4,7 +4,8 @@
 
 本文主要由黑马教程的课堂笔记整理而成。视频地址：https://www.bilibili.com/video/BV1iJ411H74S
 
-[toc]
+<iframe id="bi_iframe" onload="adjustIframe();" src="//player.bilibili.com/player.html?aid=82838691&bvid=BV1iJ411H74S&cid=142119879&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 
 ## 一、什么是日志？
 
@@ -28,7 +29,7 @@
 
 日志门面和日志实现的关系：
 
-![image-20200829100918617](img/日志技术/image-20200829100918617.png)
+![image-20200829100918617](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/cab8175110f39e7fe76df1c0c621a1ae--33cd--image-20200829100918617.png)
 
 
 
@@ -41,7 +42,7 @@ JUL全称`Java util Logging`，是java原生的日志框架，使用时不需要
 
 #### 3.1.1 JUL架构
 
-![image-20200821215452549](img/日志技术/image-20200821215452549.png)
+![image-20200821215452549](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/09119e99ffca7837069cd5e157a4dd72--42b5--image-20200821215452549.png)
 
 - Loggers：被称为记录器，应用程序通过获取`Logger`对象，调用其API来来发布日志信息。Logger
   通常是应用程序访问日志系统的入口。
@@ -79,7 +80,7 @@ public void testJUL(){
 
 执行结果：
 
-![image-20200821220752992](img/日志技术/image-20200821220752992.png)
+![image-20200821220752992](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/b443e8efd9e03b287a5e1da99ce8ceb9--e100--image-20200821220752992.png)
 
 
 
@@ -121,7 +122,7 @@ public void testLoggerLevel(){
 
 结果：
 
-![image-20200821222234235](img/日志技术/image-20200821222234235.png)
+![image-20200821222234235](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/f2c7ede6942697d9a6f5454cad60b8ff--fcb4--image-20200821222234235.png)
 
 JUL默认的日志级别为`Level.INFO`，如果输出的日志级别比`Level.INFO`的级别高（即`value`比较大），则进行日志输出，反之则不输出。
 
@@ -177,11 +178,11 @@ public void testDIYlog() throws IOException {
 
 控制台输出结果：
 
-![image-20200821224757785](img/日志技术/image-20200821224757785.png)
+![image-20200821224757785](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/13ab4bfc53886fae10d23d7783e73d58--ceff--image-20200821224757785.png)
 
 日志文件`d:/jul.log`输出结果:
 
-![image-20200821224828085](img/日志技术/image-20200821224828085.png)
+![image-20200821224828085](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/128402d34eddc158ff54202500d5c720--c3dd--image-20200821224828085.png)
 
 注意：
 
@@ -212,7 +213,7 @@ public void testParentChild(){
 
 结果：
 
-![image-20200822105302367](img/日志技术/image-20200822105302367.png)
+![image-20200822105302367](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/be485858edd4de6b0125cb20aacb17c0--69f0--image-20200822105302367.png)
 
 **RootLogger的名称为空字符串。**
 
@@ -248,7 +249,7 @@ public void testParentChild(){
 
 结果：
 
-![image-20200822105632577](img/日志技术/image-20200822105632577.png)
+![image-20200822105632577](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/f7c34598059645729b0b01877cf3e6e2--5b79--image-20200822105632577.png)
 
 
 
@@ -335,11 +336,11 @@ public void testProperties() throws IOException {
 
 控制台打印：
 
-![image-20200822140623176](img/日志技术/image-20200822140623176.png)
+![image-20200822140623176](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/e593cb0174e5108658ef2e6e8b9c7e59--679f--image-20200822140623176.png)
 
 `d:/java0.log`日志文件内容：
 
-![image-20200822140703151](img/日志技术/image-20200822140703151.png)
+![image-20200822140703151](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/c58fde2a27443d4b1c541e1a6f251027--31b4--image-20200822140703151.png)
 
 
 
@@ -380,13 +381,13 @@ public void testProperties() throws IOException {
 
 结果：
 
-![image-20200822141334308](img/日志技术/image-20200822141334308.png)
+![image-20200822141334308](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/71a17c3beb1b2888a51477b25211a2ad--8f2e--image-20200822141334308.png)
 
 
 
 #### 3.1.7 JUL日志原理解析
 
-![image-20200822141346032](img/日志技术/image-20200822141346032.png)
+![image-20200822141346032](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/c77a52a6da4ee0eeed120aed88a2d2e0--3487--image-20200822141346032.png)
 
 1. 初始化LogManager
 1. LogManager加载logging.properties配置
@@ -433,7 +434,7 @@ public void testLog4j(){
 
 结果：
 
-![image-20200826122116237](img/日志技术/image-20200826122116237.png)
+![image-20200826122116237](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/b045aacaa9cba887be0f1f7428d28121--3754--image-20200826122116237.png)
 
 注意：如果用类对象创建日志记录器，则日志记录器的名字为`包名.类名`。
 
@@ -636,7 +637,7 @@ public void testLog4j(){
 
 结果：
 
-![image-20200828210326652](img/日志技术/image-20200828210326652.png)
+![image-20200828210326652](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/4f028c0d3d4f3caf40954566069989f3--347e--image-20200828210326652.png)
 
 日志文件按照大小进行了拆分。
 
@@ -663,7 +664,7 @@ log4j.appender.dailyRollingFile.datePattern = '.'yyyy-MM-dd-hh-mm-ss
 
 测试代码与上例相同，执行多次测试代码，结果为：
 
-![image-20200828211616969](img/日志技术/image-20200828211616969.png)
+![image-20200828211616969](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/20a04e82c40c3d1abd457aaa84901cc4--1af2--image-20200828211616969.png)
 
 可以看到日志记录已按照时间进行了拆分。
 
@@ -720,7 +721,7 @@ log4j.appender.logDB.Sql=INSERT INTO log(project_name,create_date,level,category
 
 测试代码与上例相同，结果为：
 
-![image-20200828212338788](img/日志技术/image-20200828212338788.png)
+![image-20200828212338788](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/bdd5236697593c603538dcb54490b389--e1f1--image-20200828212338788.png)
 
 
 
@@ -756,7 +757,7 @@ public void testLog4j() throws InterruptedException {
 
 结果：
 
-![image-20200828212758506](img/日志技术/image-20200828212758506.png)
+![image-20200828212758506](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/a9d7584af2dacead0904075b2d5f51b2--e19a--image-20200828212758506.png)
 
 
 
@@ -770,7 +771,7 @@ public void testLog4j() throws InterruptedException {
 
 JCL 有两个基本的抽象类：Log(基本记录器)和LogFactory(负责创建Log实例)。
 
-![image-20200828213049644](img/日志技术/image-20200828213049644.png)
+![image-20200828213049644](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/d2e65bb4d81920343ee8c792697860c6--734e--image-20200828213049644.png)
 
 #### 3.3.1 JCL入门程序
 
@@ -804,13 +805,13 @@ public void testJCL(){
 
 测试结果：
 
-![image-20200828213534775](img/日志技术/image-20200828213534775.png)
+![image-20200828213534775](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/188d60311c4964c263d83d35e333984b--1ae3--image-20200828213534775.png)
 
 由于我们的项目中使用了LOG4J，所以JCL使用LOG4J作为其日志实现，即实际上是使用了LOG4J。
 
 如果我们把LOG4J依赖去除，则JCL会使用JUL来作为其日志实现，结果为：
 
-![image-20200828213659101](img/日志技术/image-20200828213659101.png)
+![image-20200828213659101](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/45e19ee52d36eb64d6170bf171ffa7f5--731b--image-20200828213659101.png)
 
 
 
@@ -818,7 +819,7 @@ public void testJCL(){
 
 1. 通过LogFactory动态加载Log实现类
 
-   ![image-20200828213731240](img/日志技术/image-20200828213731240.png)
+   ![image-20200828213731240](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/c30eb160a691a9b4081afe92f08f32a7--2f6f--image-20200828213731240.png)
 
 2. 日志门面支持的日志实现数组
 
@@ -899,7 +900,7 @@ public class SLF4JStudy {
 
 结果：
 
-![image-20200829101806670](img/日志技术/image-20200829101806670.png)
+![image-20200829101806670](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/45bb6d0233cf380d6d2dbb81b9c355de--20bc--image-20200829101806670.png)
 
 
 
@@ -920,7 +921,7 @@ public class SLF4JStudy {
 
 
 
-![image-20200829102327187](img/日志技术/image-20200829102327187.png)
+![image-20200829102327187](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/e014892ccf7f331ab7691d93db545fc9--56be--image-20200829102327187.png)
 
 通过maven引入常见的日志实现框架：
 
@@ -1028,7 +1029,7 @@ SLF4J不依赖于任何特殊的类装载。实际上，每个SLF4J绑定在编�
   - `jul-to-slf4j.jar`和`slf4j-jdk14.jar`不能同时出现。
 - 所有的桥接都只对Logger日志记录器对象有效，如果程序中调用了内部的配置类或者是Appender,Filter等对象，将无法产生效果。
 
-![image-20200829110657801](img/日志技术/image-20200829110657801.png)
+![image-20200829110657801](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/97e70d04de1aeb6987f600b3659d1c20--159d--image-20200829110657801.png)
 
 
 
@@ -1074,7 +1075,7 @@ public void testSlf4j() {
 
 结果：
 
-![image-20200829111201793](img/日志技术/image-20200829111201793.png)
+![image-20200829111201793](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/1d8d5beca198134dd30f9b693cd85752--ab05--image-20200829111201793.png)
 
 
 
@@ -1131,7 +1132,7 @@ logback会依次读取以下类型配置文件：
 
 结果：
 
-![image-20200829124328551](img/日志技术/image-20200829124328551.png)
+![image-20200829124328551](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/92e23c72f2bfab0c1b6152d0df2c64cd--db50--image-20200829124328551.png)
 
 文件FileAppender配置：
 
@@ -1176,7 +1177,7 @@ logback会依次读取以下类型配置文件：
 </root>
 ```
 
-![image-20200829125800705](img/日志技术/image-20200829125800705.png)
+![image-20200829125800705](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/9fe482a22e68904a8fafa939b0c03501--31d6--image-20200829125800705.png)
 
 RollingFileAppender配置：
 
@@ -1203,7 +1204,7 @@ RollingFileAppender配置：
 </appender>
 ```
 
-![image-20200829133835520](img/日志技术/image-20200829133835520.png)
+![image-20200829133835520](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/21de91bab4eb4078718c4e3e75883a0e--93fe--image-20200829133835520.png)
 
 异步日志的配置：
 
@@ -1275,7 +1276,7 @@ public void test01(){
 
 结果：
 
-![image-20200830130007330](img/日志技术/image-20200830130007330.png)
+![image-20200830130007330](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-06-13/63d20dfb51918952365012378abecaca--a458--image-20200830130007330.png)
 
 我们也可以使用slf4j作为日志门面，Log4j2作为日志实现：
 
