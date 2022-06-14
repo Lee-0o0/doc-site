@@ -377,6 +377,224 @@ public class Client02 {
 
 ## 4. Thrift IDL介绍
 
+本节介绍Thrift中IDL(interface definition language ，接口定义语言)的语法规则。
+
+\*.thrift文件采取IDL语法规则，\*.thrift文件可以被Thrift Compiler编译为多种目标语言。一个thrift文件就是一个文档，包含多个头部（Header）和定义（Definition）。
+
+### 4.1 Header
+
+一个Header可以是Include、CppInclude或Namespace。
+
+Include就是将其他thrift文件中的内容引入当前thrift文件，语法为：
+
+```txt
+include '另一个thrift文件路径'
+```
+
+CppInclude主要是用来为当前的 thrift 文件生成的代码中添加一个自定义的 C++ 引入声明，语法为：
+
+```txt
+cpp_include '自定义的C++引入声明'
+```
+
+Namespace用来为各个目标语言指定namespace(例如C#)/package(例如Java)/module等。语法为：
+
+```txt
+namespace 目标语言 包路径
+```
+
+目标语言包括：'*' | 'c_glib' | 'cpp' | 'delphi' | 'haxe' | 'go' | 'java' | 'js' | 'lua' | 'netstd' | 'perl' | 'php' | 'py' | 'py.twisted' | 'rb' | 'st' | 'xsd'，其中`*`代表所有目标语言。
+
+例如：
+
+```txt
+namespace java com.lee.thrift
+namespace netstd com.lee.thrift  // .net 平台
+```
+
+
+
+### 4.2 Definition
+
+在详细讲解Definition之前，我们先了解一下thrift中的数据类型。
+
+#### 4.2.1 数据类型
+
+thrift中的数据类型分为基础数据类型和容器数据类型。
+
+部分基础数据类型如下：
+
+- bool：布尔值
+- byte：8位有符号整数
+- i8：8位有符号整数
+- i16：16位有符号整数
+- i32：32位有符号整数
+- i64：64位有符号整数
+- double：64位浮点数
+- string：UTF-8编码的字符串
+- binary：未编码的字节流
+
+容器数据类型如下：
+
+- `list<T>`：列表，T为泛型
+- `set<T>`：集合，T为泛型
+- `map<K, V>`：K-V键值对，K,V为泛型。注意，K的类型有所限制，在有的情况下，只能为基础数据类型
+
+
+
+#### 4.2.2 Definition详解
+
+一个Definition可以是Const 、 Typedef 、 Enum 、 Struct 、 Union 、 Exception 或 Service。
+
+**Const** 表示定义一个常量，语法如下：
+
+```txt
+const 数据类型 标识符 = 常量值;
+```
+
+例如：
+
+```
+const i32 num = 100;
+const list<string> names = ["zs","ls"];
+const map<string, string> = { 'name': 'johnson', 'age': '20' }
+```
+
+Typedef 用于给数据类型取别名，语法如下：
+
+```txt
+typedef 数据类型名 新的数据类型名(标识符)
+```
+
+例如：
+
+```txt
+typedef i32 int32;
+// 之后，我们可以使用int32定义数据
+const int32 num = 100;  // 等价于 const i32 num = 100;
+```
+
+**Enum** 用于定义枚举类型，语法如下：
+
+```txt
+enum 标识符{
+	元素1[=常量整数值],
+	元素2[=常量整数值],
+	元素3[=常量整数值]
+}
+```
+
+例如：
+
+```txt
+enum season{
+	Spring = 1,
+	Summer = 2,
+	Autumn = 3,
+	Winter = 4
+}
+```
+
+**Struct** 用于定义结构体（类），语法如下：
+
+```txt
+struct 标识符{
+	字段1，
+	字段2，
+	...
+}
+
+其中字段的语法规则如下：
+[FieldID] [FieldReq] FieldType Identifier [= ConstValue],
+FieldID 是整型常量加 : 组成，可选的
+FieldReq 用来标识该字段是必填还是选填，分别是 required, optional 这两个关键字，都不指定，就是默认情况，默认情况可以理解为是 required 和 optional 的混合版，理论上，字段通常是会被序列化的，除非该字段是 thrift 无法传输的内容，那么这个字段就会被忽略掉。可选的。
+FieldType 字段类型，必填
+Identifier 标识符，必填
+ConstValue 常量值，可选的
+```
+
+例如：
+
+```txt
+struct BaseExample {
+  1: required string name,  // 标识为必填
+  2: i8 sex = 1,            // 指定默认值
+}
+
+struct Example {
+  1: i8 age,
+  255: BaseExample base,    // 嵌套使用 BaseExample
+}
+```
+
+**Union** 略
+
+**Exception** 用于定义异常，语法如下：
+
+```txt
+exception 标识符{
+	字段
+	...
+}
+```
+
+例如：
+
+```txt
+exception Error {
+  1: required i8 Code,
+  2: string Msg,
+}
+```
+
+**Service** 用于定义服务接口，核心内容，语法如下：
+
+```txt
+service 标识符 [extends 父标识符]{
+	接口1，
+	接口2，
+	...
+}
+
+接口定义语法规则如下：
+[oneway] FunctionType Identifier ([参数列表]) [Throws 异常]
+oneway 是一个关键字，从字面上，我们就可以了解到，他是单向的，怎么理解呢？非 oneway 修饰的 function 是应答式，即 req-resp, 客户端发请求，服务端返回响应，被 oneway 修饰后的函数，则意味着，客户端只是会发起，无须关注返回，服务端也不会响应，与 void 的区别是 void 类型的方法还可以返回异常。
+```
+
+例如：
+
+```txt
+service ExampleService {
+  string ping(),
+  oneway void GetName(1: string UserId),
+  void GetAge(1: string UserId) throws (1: Error err),
+}
+```
+
+注意：service是可以继承的。
+
+
+
+### 4.3 其他
+
+在thrift文件中我么也可以添加注释，就像C语言中一样：
+
+- 单行注释：使用`//`表示单行注释
+- 多行注释：使用`/*  ...  */`表示多行注释
+
+在 IDL 中分隔符可以是 `,` 或者 `;` 而且大部分情况下可以忽略不写
+
+在 IDL 中，字面量就是使用单引号 `'` 或双引号 `"` 括起来的字符串
+
+合法的标识符满足以下条件：
+
+1. 标识符只能由字母，数字，_（under score）, .（dot）组成
+2. 只能以字母，_ 开头
+
+字母只能是字母表中的大写 'A' - 'Z' 以及小写 'a' - 'z'
+
+数字只能是 0 - 9
+
 
 
 ## 5. Thrift体系介绍
@@ -396,6 +614,8 @@ public class Client02 {
 [1] Thrift官网：https://thrift.apache.org/
 
 [2] Thrift IDL 介绍：https://juejin.cn/post/6844903971086139400
+
+[3] Thrift IDL官方文档：https://thrift.apache.org/docs/idl
 
 [3] 单端口多服务：https://www.cnblogs.com/luckygxf/p/9393618.html
 
