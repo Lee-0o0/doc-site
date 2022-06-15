@@ -77,6 +77,14 @@
         * [日志框架](docs/Java/Java进阶/日志/Java进阶-日志技术.md)
         * [日期时间](docs/Java/Java进阶/时间/Java进阶-日期时间.md)
         * 多线程
+            * [创建新线程](docs\Java\Java进阶\多线程\01.Java进阶-多线程-创建新线程.md)
+            * [线程常用方法](docs\Java\Java进阶\多线程\02.Java进阶-多线程-常用方法.md)
+            * [线程的状态](docs\Java\Java进阶\多线程\03.Java进阶-多线程-多线程的状态.md)
+            * [线程安全问题](docs\Java\Java进阶\多线程\04.Java进阶-多线程-线程安全问题.md)
+            * [线程安全分析](docs\Java\Java进阶\多线程\05.Java进阶-多线程-线程安全分析.md)
+            * [synchronized](docs\Java\Java进阶\多线程\06.Java进阶-多线程-synchronized.md)
+            * [Monitor](docs\Java\Java进阶\多线程\07.Java进阶-多线程-Monitor.md)
+            * [wait()和notify()](docs\Java\Java进阶\多线程\08.Java进阶-多线程-wait()和notify().md)
         * [Java 8 特性]
         * [Java 9 特性]
     * Java虚拟机（JVM）
@@ -163,10 +171,11 @@
         * [WPF-样式](docs/客户端技术/WPF/WPF-样式.md)
         * [WPF-绑定](docs/客户端技术/WPF/WPF-绑定.md)
 * 工具和框架
-    * Git
+    * Git与GitHub
         * [Git使用教程](docs/工具/Git使用教程.md)
         * [Git控制台中文乱码问题](docs/工具/Git控制台中文乱码问题.md)
         * [Git设置SSH key](docs/工具/Git配置SSH密钥.md)
+        * [GitHub CI/CD 入门]
     * Markdown与Typora
         * [Typora使用教程](docs/工具/Typora使用教程.md)
         * [Typora画图教程](docs/工具/Typora画图教程.md)

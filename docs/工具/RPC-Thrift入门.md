@@ -6,6 +6,8 @@
 
 ## 1. Thrift介绍
 
+Thrift是Facebook于2007年开发的跨语言的rpc框架，提供多语言的编译功能，并提供多种服务器工作模式；用户通过Thrift的IDL（接口定义语言）来描述接口函数及数据类型，然后通过Thrift的编译器生成各种语言类型的接口文件，用户可以根据自己的需要采用不同的语言开发客户端代码和服务器端代码。
+
 
 
 ## 2. 入门案例
@@ -599,24 +601,30 @@ service ExampleService {
 
 ## 5. Thrift体系介绍
 
+Thrift 层次体系结构如下：
 
+![Apache Thrift Layered Architecture](img/RPC-Thrift入门/thrift-layers.png)
 
-## 6. 源码分析
+<center>图源：GitHub Thrift[2]</center>
 
+简化版的Thrift层次体系结构如下：
 
+![image-20220615113325734](img/RPC-Thrift入门/image-20220615113325734.png)
 
-## 7. Armeria的使用
+- Transport层：表示以什么方式传输数据
+- Protocol层：表示数据以什么格式传输
+- Processor层：表示服务接口及其实现的对应关系
+- Server和Client：表示服务端和客户端
+
+注意：服务端和客户端的Transport和Protocol需要一致，否则会报错。
 
 
 
 ## 参考资料
 
-[1] Thrift官网：https://thrift.apache.org/
-
-[2] Thrift IDL 介绍：https://juejin.cn/post/6844903971086139400
-
-[3] Thrift IDL官方文档：https://thrift.apache.org/docs/idl
-
-[3] 单端口多服务：https://www.cnblogs.com/luckygxf/p/9393618.html
-
-[4] armeria ：https://armeria.dev/tutorials/
+1. Thrift官网：https://thrift.apache.org/
+2. GitHub Thrift：https://github.com/apache/thrift
+3. Thrift IDL 介绍：https://juejin.cn/post/6844903971086139400
+4. Thrift IDL官方文档：https://thrift.apache.org/docs/idl
+5. 单端口多服务案例：https://www.cnblogs.com/luckygxf/p/9393618.html
+6. Thrift入门：https://blog.csdn.net/houjixin/article/details/42778335
