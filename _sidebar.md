@@ -177,3 +177,6 @@
     * [编码](docs/其他/编码.md)
 * 神奇的网站
     * [😀 Emoji表情](https://emojipedia.org/)
+* APCSA
+  * [01.APCSA介绍](docs/APCSA/01.APCSA介绍.md)
+  * [02.程序与Java介绍](docs/APCSA/02.程序与Java介绍.md)
