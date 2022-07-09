@@ -189,4 +189,4 @@
 * APCSA
   * [01.APCSA介绍](docs/APCSA/01.APCSA介绍.md)
   * [02.程序与Java介绍](docs/APCSA/02.程序与Java介绍.md)
-  * [03.数据类型与运算符]
+  * [03.数据类型与运算符](docs/APCSA/03.数据类型与运算符.md)
