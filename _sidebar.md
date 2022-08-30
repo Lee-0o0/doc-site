@@ -186,12 +186,17 @@
     * [编码](docs/其他/编码.md)
 * 神奇的网站
     * [😀 Emoji表情](https://emojipedia.org/)
+    * [Unicode Table](https://unicode-table.com/en/)
 * APCSA
   * [01.APCSA介绍](docs/APCSA/01.APCSA介绍.md)
   * [02.编程语言与Java介绍](docs/APCSA/02.程序与Java介绍.md)
   * [03.数据类型与运算符](docs/APCSA/03.数据类型与运算符.md)
   * [04.布尔表达式与选择语句](docs/APCSA/04.布尔表达式与选择语句.md)
-  * [05.循环语句与数据](docs/APCSA/05.循环语句与数组.md)
+  * [05.循环语句与数组](docs/APCSA/05.循环语句与数组.md)
   * [06.方法与递归](docs/APCSA/06.方法和递归.md)
   * [07.类和对象](docs/OOP/OOP-面向对象编程思想概述.md)
   * [08.常用类](docs/APCSA/08.常用类.md)
+  * [09.OOP三大特性-封装]()
+  * [10.OOP三大特性-继承]()
+  * [11.OOP三大特性-多态]()
+  * [12.List]()
