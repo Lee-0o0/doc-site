@@ -213,7 +213,98 @@ public class Dog {
 
 
 
-## 5. OOP三特性
+## 5. this关键字
+
+this 关键字是 Java 常用的关键字，可用于任何实例方法内指向当前对象，也可指向对其调用当前方法的对象。
+
+### 5.1 this.属性名
+
+大部分时候，普通方法访问其他方法、成员变量时无须使用 this 前缀，但如果方法里有个局部变量和成员变量同名，但程序又需要在该方法里访问这个被覆盖的成员变量，则必须使用 this 前缀。
+
+例如，有参构造方法中，我们通常将参数名设置为与成员变量相同：
+
+```java
+public class Dog {
+    public String name;
+    public String gender;
+    public Date birthday;
+    
+    public Dog(String name, String gender, Date birthday){
+        this.name = name;
+        this.gender = gender;
+        this.birthday = birthday;
+    }
+
+    public void bark(){
+        System.out.println("汪汪汪...");
+    }
+}
+```
+
+
+
+### 5.2 this.方法名
+
+this 关键字最大的作用就是让类中一个方法，访问该类里的另一个方法或实例变量。例如：
+
+```java
+public class Dog {
+    public String name;
+    public String gender;
+    public Date birthday;
+    
+    public Dog(String name, String gender, Date birthday){
+        this.name = name;
+        this.gender = gender;
+        this.birthday = birthday;
+    }
+
+    public void bark(){
+        System.out.println("汪汪汪...");
+    }
+    
+    public void run(){
+        System.out.println("跑跑跑...");
+    }
+    
+    public void barkAndRun(){
+        this.bark();
+        this.run();
+    }
+}
+```
+
+
+
+### 5.3 this()调用构造方法
+
+我们可以在一个类中通过方法重载的方式定义多个构造方法，如果在一个构造方法中想调用另一个构造方法，那么我们可以使用`this()`的形式来进行调用。
+
+```java
+public class Dog {
+    public String name;
+    public String gender;
+    public Date birthday;
+    
+    public Dog(String name, String gender, Date birthday){
+        this.name = name;
+        this.gender = gender;
+        this.birthday = birthday;
+    }
+    
+    public Dog(String name, String gender){
+        this(name,gender,new Date());
+    }
+    
+    public Dog(){
+        this("默认名字","未知");
+    }
+}
+```
+
+
+
+## 6. OOP三特性
 
 面向对象编程三特性为
 
@@ -225,7 +316,7 @@ public class Dog {
 
 
 
-## 6. 练习
+## 7. 练习
 
 1. 请编写一个学生类，该类包含姓名、性别、年龄，并包含自我介绍方法；
 2. 请编写一个班级类，该类包含一个学生数组和一个数量，并包含一个方法，返回班级的学生人数；
