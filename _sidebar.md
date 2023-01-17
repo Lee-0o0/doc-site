@@ -61,8 +61,8 @@
     * 关系型数据库
         * MySQL
             * [MySQL介绍与安装](docs\数据库\MySQL\01.数据库-数据库介绍.md)
-            * [CentOS安装MySQL](docs\数据库\MySQL\02.数据库-Centos 7 安装mysql 8.0.md)
-            * [Windows安装MySQL](docs\数据库\MySQL\03.数据库-Windows 10上安装MySQL 8.0.md)
+            * [CentOS安装MySQL](docs\数据库\MySQL\02.数据库-Centos7安装mysql8.md)
+            * [Windows安装MySQL](docs\数据库\MySQL\03.数据库-Windows10上安装MySQL8.md)
             * [操作数据库](docs\数据库\MySQL\04.数据库-操作数据库.md)
             * [创建和操纵数据库](docs\数据库\MySQL\05.数据库-创建和操纵数据表.md)
             * [插入数据](docs\数据库\MySQL\06.数据库-插入数据.md)
