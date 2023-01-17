@@ -92,7 +92,7 @@ public class Dog {
 对象的创建使用关键字`new`：
 
 ```java
-类名 对象名 = new 类名();
+类名(数据类型) 对象名(变量名) = new 类名([参数列表]);   // 调用方法的语法格式： 方法名([实参]);
 ```
 
 例如：
@@ -123,6 +123,34 @@ littleBlackDog.bark();           // 输出 汪汪汪...
 ```
 可以看到在构造方法的定义中，没有方法返回值类型，并且方法名就是类名。
 Java为我们提供了一个默认构造方法，该构造函数没有方法参数，方法体中没有语句。如果我们定义了自己的构造方法，那么Java就不会为我们提供默认构造方法。
+
+
+
+**this关键字**
+
+this关键字用于引用当前实例（对象），在Java语言中，当创建一个对象后，Java虚拟机就会为其分配一个指向对象本身的指针，这个指针就是“this”。因此，this只能在类中的非静态方法中使用，静态方法和静态的代码块中绝对不能出现this，并且this只和特定的对象关联，而不和类关联，同一个类的不同对象有不同的this。
+
+```java
+public class Dog {
+    public String name;
+    public String gender;
+    public LocalDateTime birthday;
+
+    public Dog(){
+        System.out.println("构造方法1调用。。。");
+    }
+
+    public Dog(String name){
+        System.out.println("构造方法2调用。。。");
+    }
+
+    public Dog(String name,String gender){
+        System.out.println("构造方法3调用。。。");
+    }
+}
+```
+
+如何利用`this`将参数赋值给属性？
 
 
 
@@ -292,3 +320,11 @@ public class Dog {
 
 1. 请编写一个学生类，该类包含姓名、性别、年龄，并包含自我介绍方法；
 2. 请编写一个班级类，该类包含一个学生数组和一个数量，并包含一个方法，返回班级的学生人数；
+
+学生成绩管理系统
+
+1. 能创建学生
+2. 能输入学生的成绩
+3. 查看已创建学生的成绩
+4. 修改学生成绩
+5. 删除学生
