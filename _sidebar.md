@@ -60,8 +60,19 @@
 * 数据库
     * 关系型数据库
         * MySQL
-            * MySQL介绍与安装
-
+            * [MySQL介绍与安装](docs\数据库\MySQL\01.数据库-数据库介绍.md)
+            * [CentOS安装MySQL](docs\数据库\MySQL\02.数据库-Centos 7 安装mysql 8.0.md)
+            * [Windows安装MySQL](docs\数据库\MySQL\03.数据库-Windows 10上安装MySQL 8.0.md)
+            * [操作数据库](docs\数据库\MySQL\04.数据库-操作数据库.md)
+            * [创建和操纵数据库](docs\数据库\MySQL\05.数据库-创建和操纵数据表.md)
+            * [插入数据](docs\数据库\MySQL\06.数据库-插入数据.md)
+            * [删除和更新数据行](docs\数据库\MySQL\07.数据库-删除和更新数据行.md)
+            * [查询数据](docs\数据库\MySQL\08.数据库-查询数据.md)
+            * [排序查询数据](docs\数据库\MySQL\09.数据库-排序查询结果.md)
+            * [过滤数据](docs\数据库\MySQL\10.数据库-过滤数据.md)
+            * [函数](docs\数据库\MySQL\11.数据库-函数.md)
+            * [分组查询](docs\数据库\MySQL\12.数据库-分组查询.md)
+            * [连接查询](docs\数据库\MySQL\13.数据库-连接查询.md)
     * 非关系型数据库
         * Redis
         * [MongoDB](docs/数据库/MongoDB使用教程.md)
@@ -187,16 +198,3 @@
 * 神奇的网站
     * [😀 Emoji表情](https://emojipedia.org/)
     * [Unicode Table](https://unicode-table.com/en/)
-* APCSA
-  * [01.APCSA介绍](docs/APCSA/01.APCSA介绍.md)
-  * [02.编程语言与Java介绍](docs/APCSA/02.程序与Java介绍.md)
-  * [03.数据类型与运算符](docs/APCSA/03.数据类型与运算符.md)
-  * [04.布尔表达式与选择语句](docs/APCSA/04.布尔表达式与选择语句.md)
-  * [05.循环语句与数组](docs/APCSA/05.循环语句与数组.md)
-  * [06.方法与递归](docs/APCSA/06.方法和递归.md)
-  * [07.类和对象](docs/OOP/OOP-面向对象编程思想概述.md)
-  * [08.常用类](docs/APCSA/08.常用类.md)
-  * [09.OOP三大特性-封装]()
-  * [10.OOP三大特性-继承]()
-  * [11.OOP三大特性-多态]()
-  * [12.List]()
