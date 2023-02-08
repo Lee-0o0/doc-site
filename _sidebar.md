@@ -1,7 +1,5 @@
 * 导读
     * [首页](/)
-    * [关于](About.md)
-    * [学习路线](Route.md)
 * C语言教程
     * [C语言— —编程语言与Hello World](docs/C/C语言-编程语言与HelloWorld.md)
     * [C语言— —进制](docs/C/C语言-进制.md)
@@ -26,36 +24,25 @@
     * [OOP三大特性— —多态](docs/OOP/OOP-多态.md)
     * [UML图— —类图](docs/设计模式/UML图-类图.md)
 
-* 汇编语言
-
 * 数据结构与算法
     * 数据结构
         * [数据结构— —顺序表]
-        * [数据结构— —栈]
-        * [数据结构— —队列]
         * [数据结构— —树](docs/数据结构与算法/数据结构-树.md)
         * [数据结构— —图](docs/数据结构与算法/数据结构-图.md)
     * 算法
-        * [算法— —查找算法]
         * [算法— —排序算法](docs/数据结构与算法/算法-排序算法.md)
         * [算法— —哈希算法](docs/数据结构与算法/算法-哈希算法.md)
-    * Leetcode
-        * [796-旋转字符串](docs/Leetcode/796-旋转字符串.md)
+* Leetcode
+    * [796-旋转字符串](docs/Leetcode/796-旋转字符串.md)
 * 操作系统
     * 操作系统原理
       * [进程](docs/操作系统/进程.md)
-    * Windows操作系统
     * Linux操作系统
         * [Linux简介](docs/操作系统/Linux/Linux简介.md)
         * [Linux文件系统基础](docs/操作系统/Linux/文件系统基础.md)
         * [Linux文本文件内容管理](docs/操作系统/Linux/文本文件内容管理.md)
         * [Linux用户和用户组管理](docs/操作系统/Linux/用户和用户组管理.md)
         * [Linux文件权限管理](docs/操作系统/Linux/文件权限管理.md)
-        * [在Linux上安装软件]
-
-* 计算机网络
-
-* 计算机组成原理
 
 * 数据库
     * 关系型数据库
@@ -75,6 +62,13 @@
             * [连接查询](docs\数据库\MySQL\13.数据库-连接查询.md)
     * 非关系型数据库
         * Redis
+            * [Redis-概述](docs\数据库\Redis\01.Redis-Redis概述.md)
+            * [Redis-数据类型](docs\数据库\Redis\02.Redis-数据类型.md)
+            * [Redis-持久化](docs\数据库\Redis\03.Redis-持久化.md)
+            * [Redis-事务](docs\数据库\Redis\04.Redis-事务.md)
+            * [Redis-发布订阅](docs\数据库\Redis\05.Redis-发布订阅.md)
+            * [Redis-复制](docs\数据库\Redis\06.Redis-复制.md)
+            * [Redis-Java操作Redis](docs\数据库\Redis\07.Redis-Java连接Redis.md)
         * [MongoDB](docs/数据库/MongoDB使用教程.md)
 * 编译原理
 
@@ -83,8 +77,6 @@
         * [Java中的字符]
 
     * Java进阶
-        * [泛型]
-        * [集合]
         * [日志框架](docs/Java/Java进阶/日志/Java进阶-日志技术.md)
         * [日期时间](docs/Java/Java进阶/时间/Java进阶-日期时间.md)
         * 多线程
@@ -96,9 +88,6 @@
             * [synchronized](docs\Java\Java进阶\多线程\06.Java进阶-多线程-synchronized.md)
             * [Monitor](docs\Java\Java进阶\多线程\07.Java进阶-多线程-Monitor.md)
             * [wait()和notify()](docs\Java\Java进阶\多线程\08.Java进阶-多线程-wait()和notify().md)
-        * [Java 8 特性]
-        * [Java 9 特性]
-    * Java虚拟机（JVM）
     * Maven教程
         * [Maven-Maven介绍、安装与入门](docs/Java/Maven/maven-maven介绍安装与入门.md)
         * [Maven-生命周期](docs/Java/Maven/maven-生命周期.md)
@@ -153,7 +142,6 @@
         * [SpringBoot-指标监控](docs/Java/SpringBoot/09.SpringBoot-指标监控.md)
         * [SpringBoot-自定义starter](docs/Java/SpringBoot/10.SpringBoot-自定义starter.md)
         * [SpringBoot-启动流程分析](docs/Java/SpringBoot/11.SpringBoot-启动流程分析.md)
-    * Spring Cloud教程
     * 其他
         * [Lombok的使用](docs/Java/其他/Lombok的使用.md)
 * 设计模式
@@ -165,17 +153,13 @@
     * [设计模式-观察者模式](docs/设计模式/设计模式-观察者模式.md)
     * [设计模式-原型模式](docs/设计模式/设计模式-原型模式.md)
 * 前端技术
-    * HTML
     * CSS
         * [CSS-入门](docs/前端/CSS-入门.md)
         * [CSS-继承与层叠](docs/前端/CSS-继承与层叠.md)
         * [CSS-选择器]
         * [CSS-盒模型](docs/前端/CSS-和模型.md)
         * [CSS-布局]
-    * JavaScript
-    * 微信小程序
 * 客户端技术
-    * WinForm
     * WPF
         * [WPF-开始](docs/客户端技术/WPF/WPF-开始.md)
         * [WPF-布局](docs/客户端技术/WPF/WPF-布局.md)
