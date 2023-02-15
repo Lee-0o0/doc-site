@@ -182,3 +182,4 @@
 * 神奇的网站
     * [😀 Emoji表情](https://emojipedia.org/)
     * [Unicode Table](https://unicode-table.com/en/)
+    * [Loading Icon](https://loading.io/)
