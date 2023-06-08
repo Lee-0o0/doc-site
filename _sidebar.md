@@ -70,11 +70,8 @@
             * [Redis-复制](docs/数据库/Redis/06.Redis-复制.md)
             * [Redis-Java操作Redis](docs/数据库/Redis/07.Redis-Java连接Redis.md)
         * [MongoDB](docs/数据库/MongoDB使用教程.md)
-* 编译原理
 
 * Java教程
-    * Java基础
-        * [Java中的字符]
 
     * Java进阶
         * [日志框架](docs/Java/Java进阶/日志/Java进阶-日志技术.md)
@@ -177,9 +174,8 @@
         * [Typora图库搭建教程](docs/工具/Typora图床搭建教程.md)
     * [Thrift使用](docs/工具/RPC-Thrift入门.md)
     * [Nginx使用](docs/工具/Nginx.md)
-* 其他
-    * [编码](docs/其他/编码.md)
-* 神奇的网站
+* 推荐网站
     * [😀 Emoji表情](https://emojipedia.org/)
     * [Unicode Table](https://unicode-table.com/en/)
     * [Loading Icon](https://loading.io/)
+    * [开发者技术路线](https://roadmap.sh/)

@@ -10,6 +10,26 @@
 
 简而言之，maven是一个项目管理工具，帮助我们更好地构建项目。
 
+maven可以帮助我们管理项目依赖和构建项目。
+
+- 管理项目依赖：项目依赖管理主要做以下事情：
+  - jar 包的下载：使用 Maven 之后，jar 包会从规范的远程仓库下载到本地
+  - jar 包之间的依赖：通过依赖的传递性自动完成
+  - jar 包之间的冲突：通过对依赖的配置进行调整，让某些jar包不会被导入
+- 构建项目：将我们编写的源代码构建成可部署运行的程序。构建过程包含的主要的环节：
+  - 清理：删除上一次构建的结果，为下一次构建做好准备
+  - 编译：Java 源程序编译成 *.class 字节码文件
+  - 测试：运行提前准备好的测试程序
+  - 报告：针对刚才测试的结果生成一个全面的信息
+  - 打包
+    - Java工程：jar包
+    - Web工程：war包
+  - 安装：把一个 Maven 工程经过打包操作生成的 jar 包或 war 包存入 Maven 仓库
+  - 部署
+    - 部署 jar 包：把一个 jar 包部署到 Nexus 私服服务器上
+    - 部署 war 包：借助相关 Maven 插件（例如 cargo），将 war 包部署到 Tomcat 服务器上
+
+
 
 
 ## 2. maven安装
@@ -53,6 +73,14 @@ mvn archetype:generate -DgroupId=com.lee -DartifactId=my-app -DarchetypeArtifact
 提示已在桌面上创建了一个项目。我们查看这个新项目的目录结构：
 
 ![image-20210511141712327](https://cdn.jsdelivr.net/gh/Lee-0o0/image-store/PicGo/2022-04-01/17c42540c20ce008a1eecea48d791553--5100--image-20210511141712327.png)
+
+上述命令自带了一些参数，我们也可以执行下面的命令：
+
+```shell
+mvn archetype:generate
+```
+
+然后在控制台中输入相关参数。
 
 可以发现，maven帮助我们创建了基础的java项目包、类等文件，并且，最重要的是还有一个pom.xml文件，该文件内容如下：
 
@@ -245,4 +273,6 @@ mvn clean
 问题明确：https://blog.csdn.net/xqnode/article/details/86628794
 
 问题解决：https://blog.csdn.net/zwc2xm/article/details/91492284
+
+[3] http://heavy_code_industry.gitee.io/code_heavy_industry/pro002-maven/
 
