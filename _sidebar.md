@@ -87,9 +87,10 @@
             * [wait()和notify()](docs/Java/Java进阶/多线程/08.Java进阶-多线程-wait()和notify().md)
     * Maven教程
         * [Maven-Maven介绍、安装与入门](docs/Java/Maven/maven-maven介绍安装与入门.md)
+        * [Maven-在IDEA中使用Maven](docs/Java/Maven/maven-在IDEA中使用maven.md)
         * [Maven-生命周期](docs/Java/Maven/maven-生命周期.md)
         * [Maven-依赖机制](docs/Java/Maven/maven-依赖机制.md)
-        * [Maven-在IDEA中使用Maven](docs/Java/Maven/maven-在IDEA中使用maven.md)
+        * [Maven-Nexus的使用](docs/Java/Maven/Maven-Nexus的使用.md)
     * Java WEB
         * [Java WEB-Tomcat了解](docs/Java/JavaWEB/JavaWEB-Tomcat了解.md)
         * [Java WEB-Servlet入门](docs/Java/JavaWEB/JavaWEB-Servlet入门.md)
