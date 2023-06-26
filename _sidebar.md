@@ -163,6 +163,8 @@
         * [WPF-布局](docs/客户端技术/WPF/WPF-布局.md)
         * [WPF-样式](docs/客户端技术/WPF/WPF-样式.md)
         * [WPF-绑定](docs/客户端技术/WPF/WPF-绑定.md)
+    * RDLC
+        * [RDLC-概述](docs/客户端技术/RDLC/RDLC-概述.md)
 * 工具和框架
     * Git与GitHub
         * [Git使用教程](docs/工具/Git使用教程.md)
